@@ -229,7 +229,7 @@ def left_func():
         print('But now (after a week of feasting, sheesh!) it is time to go on other quests as well')
         print('And you continue on your journeys...\n')
         print('~ ~ A Letter from Dev ~ ~\n')
-        print('Thank you for playing this game! Even though it is long (probably), I hope it was fun for you!')
+        print('Hi! StriderDunedain here! Thank you for playing this game! Even though it is long (probably), I hope it was fun for you!')
         print('For the most part I was working out how OOP in Python works and not making a game.')
         print('But maybe I will work on this program later. And an even bigger maybe is that someday it could evolve in a complete game!')
         print('But for now, going to go polish my skills)')
