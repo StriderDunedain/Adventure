@@ -81,12 +81,12 @@ class Attack:
         for i in range(0, 100):
             self.hp_b -= demon.damage
             if self.hp_b <= 0:
-                print('You f*cking died!\n')
+                print('You have, quite unfortunately, DIED!\n')
                 break
             else:
                 print('The Demon King deals you {damage} and you have {hp} left!\n'.format(damage=demon.damage, hp=self.hp_b))
             demon.health -= self.att_b
-            if self.demon.health <= 0:
+            if demon.health <= 0:
                 print('He is dead!!!')
                 print('You won!\n')
                 break
@@ -94,19 +94,6 @@ class Attack:
                 print('You deal Demon King {damage} and he has {hp} left!\n'.format(damage=self.att_b, hp=demon.health))
 
 awesome_attack = Attack()
-
-def road_choice():
-    if choice == 'l':
-        print(' - Very well, your choice is left - \n')
-        print('~ ~ The Road ~ ~\n')
-        print(left_func())
-    elif choice == 's':
-        print(' - Very well, your choice is straight -\n')
-        print('~ ~ The Road ~ ~\n')
-        print(straight_func)
-    elif choice == 'r':
-        print(' - Very well, your choice is right -\n')
-        print('~ ~ The Road ~ ~\n')
 
 def left_func():
     print("The road you chose is quite empty, just like that man at the gates warned you.")
@@ -218,28 +205,37 @@ def left_func():
     print('After some time you get to the Eastern Gates')
     print('The sight of such a thing instiils fear in all but, of course, you')
     print("You take a step and now you are in Demon King's land...\n")
-    print('~ ~ The Last Part ~ ~\n')
-    print('The land is barren and just waste')
-    print('The last strife and the Princess will be saved!')
-    print('As you come up to the castle you call upon the Demon King loud and your voice rings through the halls of his castle like thunder')
-    print('Therefore Demon King came, climbing slowly from his bone throne, and the rumour of his feet was like thunder underground. And he issued forth clad in black armour, and he stood before the yourself like a tower, iron-crowned, and his vast shield, sable unblazoned, cast a shadow over him like a stormcloud.')
-    print('He is certainly bigger than you expected and he says:\n')
-    print('- Oh, why would thou come hither? Do you not know my might?!\n')
-    print('And with these words he stamped so hard the ground shook!')
-    print('You, in turn, say:')
-    print('- I have not come here to exchange words with one like you!\n')
-    print('And now let the battle commence!!!')
-    # Final Battle
-    awesome_attack.demon_king()
+    waiting_2 = input('~ Are you ready to go on? ~ (y/n)')
+    if waiting_2 == 'y' or 'n':
+        print('~ ~ The Last Part ~ ~\n')
+        print('The land is barren and just waste')
+        print('The last strife and the Princess will be saved!')
+        print('And now for the King...')
+        print('As you come up to the castle you call upon the Demon King loud and your voice rings through the halls of his castle like thunder')
+        print('Therefore Demon King came, climbing slowly from his bone throne, and the rumour of his feet was like thunder underground. And he issued forth clad in black armour, and he stood before the yourself like a tower, iron-crowned, and his vast shield, sable unblazoned, cast a shadow over him like a stormcloud.')
+        print('He is certainly bigger than you expected and he says:\n')
+        print('- Oh, why would thou come hither? Do you not know my might?!\n')
+        print('And with these words he stamped so hard the ground shook!')
+        print('You, in turn, say:')
+        print('- I have not come here to exchange words with one like you!\n')
+        print('And now let the battle commence!!!')
+        # Final Battle
+        awesome_attack.demon_king()
+        print('\n')
+        print('~ ~ The Return (also known as epilogue) ~ ~\n')
+        print('You return to the castle with princess in your arms and the Kingdom roars with cries of joy!')
+        print('The Queen grants you yet another medal and they host a unimaginamble feast in your honor!')
+        print('You are a hero!')
+        print('But now (after a week of feasting, sheesh!) it is time to go on other quests as well')
+        print('And you continue on your journeys...\n')
+        print('~ ~ A Letter from Dev ~ ~\n')
+        print('Thank you for playing this game! Even though it is long (probably), I hope it was fun for you!')
+        print('For the most part I was working out how OOP in Python works and not making a game.')
+        print('But maybe I will work on this program later. And an even bigger maybe is that someday it could evolve in a complete game!')
+        print('But for now, going to go polish my skills)')
+        print('\n')
+        # The End, for now...)
 
-
-
-
-
-def straight_func():
-    pass
-def right_func():
-    pass
 print("Mighty Barry was one of the grandest heroes this world has ever known! He has done so many cool things we can't even remember them all.")
 print('So we are going to play at his most famous story we still remember - The Demonish Escapade!')
 print("Let's begin...\n")
@@ -258,16 +254,13 @@ print('As you go out of the Gleaming Castle a man suddenly appears before you an
 print("-Aren't you that hero? Barry, am I right?")
 print("-'Well, yes, I am' - you answer, still bewildered by his appearence")
 print("-Going on another adventure, eh?")
-print("Yes, I am in a matter of fact, to the Demon King's Castle. Maybe you can help me. Which way should I go? Left, right or straight? I have never been here before.")
+print("Yes, I am in a matter of fact, to the Demon King's Castle. Maybe you can help me. Which way should I go?")
 print('He says:')
-print("-Oh, you can go left. It sure is the shortest way but quite tedious and hard. Plus, it's hard to get through the Eastern Avanpost.")
-print("-You can also go straight, through the mountains, but you will miss the Mystery Tavern. It could have very interesting things.")
-print("-Or you can choose the longest way, which is right, but it is far more and pleasant than the other two.\n")
-choice = input('- So what do you choose? - (l, s, r)')
-if ((choice == 'l') or (choice == 's') or (choice == 'r')) == False:
-    print("You didn't choose a road!")
-    print('Please do:')
-    choice = input('- So what do you choose? - (l, s, r)')
-    road_choice()
+print('- Well, to be honest, the straight and right roads are now in bad shape due to the heavy rains. Maybe they would dry up a few updat... what did I say? I mean, months.')
+print('- So for now your only choice is left')
+waiting = input('~ Are you ready to continue? ~ (y/n)')
+if waiting == 'y':
+    left_func()
 else:
-    road_choice()
+    print('Well, going anyway')
+    left_func()
